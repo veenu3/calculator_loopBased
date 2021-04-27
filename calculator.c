@@ -18,6 +18,7 @@ printf(" Press the value :5 for '>>'\n");
 printf(" Press the value :6 for '<<'\n");
 printf("Enter your key:");
 scanf("%d",&n);
+//switch statement
 switch(n)
 {
 case 1:
