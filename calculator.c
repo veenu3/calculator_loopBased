@@ -16,6 +16,7 @@ printf(" Press the value :3 for '*'\n");
 printf(" Press the value :4 for '%'\n");
 printf(" Press the value :5 for '>>'\n");
 printf(" Press the value :6 for '<<'\n");
+printf(" Press the value :7 for '/'\n");
 printf("Enter your key:");
 scanf("%d",&n);
 //switch statement
@@ -45,6 +46,19 @@ case 6:
     c=a<<b;
     printf("Calculation:%d\n",c);
     break;
+case 7:
+    if(b==0){
+        printf("can not be divided by 0\n");
+        break;
+    }
+    else{
+      c=a/b;
+    printf("Calculation:%d\n",c);
+      break;
+    }
+default:
+    printf("please select the right choice\n");
+     break;
 }
 printf("Do you want to continue \n");
 printf("press :y for 'yes'\n");
