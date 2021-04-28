@@ -9,8 +9,7 @@ do{
 printf("Enter the value first number:");
 scanf("%d",&a);
 printf("Enter the value second number:");
-scanf("%d",&b);
-printf(" Press the value :1 for '+'\n");
+
 printf(" Press the value :2 for '-'\n");
 printf(" Press the value :3 for '*'\n");
 printf(" Press the value :4 for '%'\n");
