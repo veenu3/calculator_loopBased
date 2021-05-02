@@ -1,4 +1,14 @@
 #include<stdio.h>
+int add(int a,int b);
+int sub(int a,int b);
+int multiple(int a,int b);
+int modulus(int a,int b);
+int rightshift(int a,int b);
+int leftshift(int a,int b);
+int divide(int a,int b);
+void printResult(int c);
+void swap_number(int*a,int*b);
+void printResult2(int c,int d);
 int main()
 {
 int a,c;
@@ -17,34 +27,35 @@ printf(" Press the value :4 for '%'\n");
 printf(" Press the value :5 for '>>'\n");
 printf(" Press the value :6 for '<<'\n");
 printf(" Press the value :7 for '/'\n");
+printf(" Press the value :8 for swap the value a and b\n");
 printf("Enter your key:");
 scanf("%d",&n);
 //switch statement
 switch(n)
 {
 case 1:
-    c=a+b;
-    printf("Calculation:%d\n",c);
+    c=add(a,b);
+     printResult(c);
     break;
 case 2:
-    c=a+b;
-    printf("Calculation:%d\n",c);
+    c=sub(a,b);
+    printResult(c);
     break;
 case 3:
-    c=a*b;
-    printf("Calculation:%d\n",c);
+    c=multiple(a,b);
+    printResult(c);
     break;
 case 4:
-    c=a%b;
-    printf("Calculation:%d\n",c);
+    c=modulus(a,b);
+    printResult(c);
     break;
 case 5:
-    c=a>>b;
-    printf("Calculation:%d\n",c);
+    c=rightshift(a,b);
+    printResult(c);
     break;
 case 6:
-    c=a<<b;
-    printf("Calculation:%d\n",c);
+    c=leftshift(a,b);
+    printResult(c);
     break;
 case 7:
     if(b==0){
@@ -52,10 +63,14 @@ case 7:
         break;
     }
     else{
-      c=a/b;
-    printf("Calculation:%d\n",c);
+      c=divide(a,b);
+      printResult(c);
       break;
     }
+ case 8:
+     swap_number(&a,&b);
+     printResult2(a,b);
+      break;
 default:
     printf("please select the right choice\n");
      break;
@@ -67,4 +82,56 @@ scanf(" %c",&ch);
 }while (ch=='y');
  printf("THNAK YOU!");
 return 0;
+}
+int add(int a,int b)
+{
+ int c;
+ c=a+b;
+ return c;
+}
+int sub(int a,int b)
+{
+ int c;
+ c=a-b;
+ return c;
+}
+int multiple(int a,int b)
+{
+ int c;
+ c=a*b;
+ return c;
+}
+int modulus(int a,int b)
+{
+ int c;
+ c=a%b;
+ return c;
+}
+int rightshift(int a,int b)
+{
+ int c;
+ c=a>>b;
+ return c;
+}
+int leftshift(int a,int b)
+{
+ int c;
+ c=a<<b;
+ return c;
+}
+int divide(int a,int b){
+ int c;
+ c=a/b;
+ return c;
+}
+void printResult(int c){
+ printf("Calculation:%d\n",c);
+}
+void swap_number(int*a,int*b){
+    int t=*a;
+    *a=*b;
+    *b=t;
+}
+void printResult2(int c,int d){
+ printf("swapped value:%d,%d\n",c,d);
 }
